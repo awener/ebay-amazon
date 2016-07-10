@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app ="myApp">
+    <head>
+        <title>Ebay / Amazon Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+   
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script type='text/javascript' src="app.js" charset="UTF-8"></script>
+        
+    </head>
+    <body ng-controller='searchController'>
+        <div class="container" >
+        	<div class='row'>
+        		<div ng-show='!loading' class="col-sm-4 col-md-4 col-md-offset-4" style='margin-top: 200px;'> 
+        		 <form>
+        		 	<div class='form-group'>
+                	<input ng-model='username' type="text" class="form-control" placeholder="Search" required autofocus>
+                	</div>
+                	<div class='form-group'>
+                		<select class='form-control' ng-init="date = options[1]" 
+        					ng-model="date" 
+        					ng-options="option.name for option in options">
+						</select>
+                	
+                	</div>
+
+                    <div class='form-group'>
+                        <select class='form-control' ng-init="min_sold = sold[0]" 
+                            ng-model="min_sold" 
+                            ng-options="sold.name for sold in sold">
+                        </select>
+                    
+                    </div>
+
+                	<div class='form-group'>
+                		<button ng-click='search(username, date.value, min_sold.value); loading=true;pageLoaded=false;' class="btn btn-lg btn-primary btn-block" type="button">
+                   		 Search</button>
+                   	</div>
+                
+                
+                </form>
+            	</div>
+                 <div ng-show='loading && !pageLoaded' class="col-sm-4 col-md-4 col-md-offset-4" style='margin-top: 200px;'><h1>Loading..</h1></div>
+               
+        	</div>
+        </div>
+         <div ng-show='pageLoaded' class='col-md-12 col-sm-12 col-lg-12'>
+            <div><h1>Search time: {{searchTime}}</h1></div>
+            <div ><h1>Total items: {{item.length}}</h1></div>
+            <div ><h1>Total amazon matches: {{amazon_matches}}</h1></div>
+         </div>
+         <div ng-show='pageLoaded' class='col-md-12 col-sm-12 col-lg-12' ng-repeat='i in item | orderBy: "amazon[0].price"' style='margin-bottom: 50px;'>
+                    <span class='col-md-1'><img width='60' height='60' src='{{i.thumbnail}}'/></span>
+                    <span class='col-md-2'>{{i.title}}</span>
+                    <span class='col-md-1'>{{i.price}}</span>
+                    <span class='col-md-1'>Sold: {{i.sold_count}}</span>
+                    <span class='col-md-1'>Watchers: {{i.watchCount}}</span>
+                    
+                    <span class='col-md-1' ng-show='i.amazon[0].thumbnail'><img width='60' height='60' src='{{i.amazon[0].thumbnail}}'/></span>
+                    <span class='col-md-2' ng-show='!i.amazon[0].title'><a href='{{i.amazon[0].searchUrl}}' target='_new'>No match - amazon search URL</a></span>
+                    <span class='col-md-2' ng-show='i.amazon[0].title'>{{i.amazon[0].title}}</span>
+                    <span class='col-md-1' ng-show='i.amazon[0].price'>{{i.amazon[0].price}}</span>
+                    <span class='col-md-1' ng-show='i.amazon[0].asin'>{{i.amazon[0].asin}}</span>
+                    
+
+
+
+
+                </div>
+    </body>
+</html>

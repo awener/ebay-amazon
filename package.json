@@ -1,0 +1,20 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ebay.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "amazon-product-api": "^0.3.10",
+    "async": "^1.5.2",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "moment": "^2.14.1",
+    "xml2js": "^0.4.17"
+  }
+}
