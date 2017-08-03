@@ -1,20 +1,117 @@
 {
-  "name": "code",
-  "version": "1.0.0",
-  "description": "",
-  "main": "ebay.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "name": "mean",
+  "description": "MEAN.io: A fullstack javascript platformed powerd by MongoDB, ExpressJS, AngularJS, NodeJS.",
+  "version": "0.3.2",
+  "private": false,
+  "author": "Linnovate <mean@linnovate.net>",
+  "contributors": [
+    {
+      "name": "Lior Kesos",
+      "mail": "lior@linnovate.net"
+    },
+    {
+      "name": "Yonatan Ellman",
+      "mail": "yonatan@linnovate.net"
+    },
+    {
+      "name": "Ehud Shahak",
+      "mail": "ehud@linnovate.net"
+    },
+    {
+      "name": "Amos Haviv",
+      "mail": "mail@amoshaviv"
+    },
+    {
+      "name": "Drew Fyock",
+      "mail": "drew@steelbisondev.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linnovate/mean.git"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "scripts": {
+    "start": "node node_modules/grunt-cli/bin/grunt",
+    "test": "node node_modules/grunt-cli/bin/grunt test",
+    "postinstall": "node node_modules/bower/bin/bower install"
+  },
+  "dependencies": {
+    "2checkout-node": "0.0.1",
+    "2co": "0.0.4",
+    "angular": "^1.4.7",
+    "angular-clipboard": "^1.1.1",
+    "assetmanager": "0.1.1",
+    "async": "^0.7.0",
+    "bower": "^1.2.8",
+    "cheerio": "^0.15.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^0.4.0",
+    "consolidate": "^0.10.0",
+    "cors": "^2.5.3",
+    "count-shares": "^1.0.2",
+    "cron": "^1.0.4",
+    "debug": "^2.2.0",
+    "dependable": "0.2.5",
+    "express": "^3.4.7",
+    "express-cors": "0.0.3",
+    "express-validator": "^1.0.1",
+    "fbgraph": "^0.2.10",
+    "forever": "^0.10.11",
+    "get-youtube-id": "^0.1.3",
+    "grunt-cli": "^0.1.13",
+    "grunt-concurrent": "latest",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "^0.7.*",
+    "grunt-contrib-watch": "latest",
+    "grunt-env": "^0.4.1",
+    "grunt-nodemon": "0.2.0",
+    "instagram-node": "^0.3.0",
+    "kue": "^0.9.3",
+    "load-grunt-tasks": "^0.4.0",
+    "lodash": "^2.4.1",
+    "mailgun-js": "^0.7.14",
+    "mandrill-api": "^1.0.45",
+    "mean-logger": "0.0.1",
+    "meanio": "0.4.x",
+    "moment": "^2.6.0",
+    "mongoose": "^3.8.3",
+    "nodemailer": "^0.6.4",
+    "passport": "^0.1.18",
+    "passport-facebook": "^1.0.2",
+    "passport-github": "^0.1.5",
+    "passport-google-oauth": "^0.1.5",
+    "passport-linkedin": "^0.1.3",
+    "passport-local": "^0.1.6",
+    "passport-twitter": "^1.0.2",
+    "paypal-rest-sdk": "^1.5.3",
+    "random-ua": "0.0.4",
+    "redis": "^0.10.1",
+    "request": "^2.34.0",
+    "soundcloud-lookup": "0.0.2",
+    "swig": "^1.3.2",
+    "swig-email-templates": "^1.1.0",
+    "time": "^0.10.0",
+    "twitter": "^0.2.9",
+    "url": "^0.10.1",
+    "view-helpers": "^0.1.4",
+    "winston": "^2.3.1"
+  },
   "devDependencies": {
-    "amazon-product-api": "^0.3.10",
-    "async": "^1.5.2",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "moment": "^2.14.1",
-    "xml2js": "^0.4.17"
+    "assetmanager": "^0.1.1",
+    "grunt-angular-templates": "^0.5.7",
+    "grunt-karma": "^0.6.2",
+    "grunt-mocha-test": "latest",
+    "karma": "^0.10.4",
+    "karma-coverage": "^0.1.0",
+    "should": "2.1.1",
+    "supertest": "0.8.2",
+    "swig-email-templates": "https://registry.npmjs.org/swig-email-templates/-/swig-email-templates-1.1.0.tgz",
+    "time-grunt": "^0.3.1"
   }
 }
