@@ -8,8 +8,6 @@ var client = amazon.createClient({
   awsSecret: "",
   awsTag: ""
 });
-// kukeitt
-// dumdah
 exports.amazon = function(ebay, callback) {
 
   var holder = [];
