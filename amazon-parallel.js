@@ -8,7 +8,7 @@ var client = amazon.createClient({
   awsSecret: "",
   awsTag: ""
 });
-
+// kukeitt
 exports.amazon = function(ebay, callback) {
 
   var holder = [];
