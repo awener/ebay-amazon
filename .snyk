@@ -1,0 +1,20 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:mime:20170907':
+    - fbgraph > request > form-data > mime:
+        patched: '2018-06-28T00:54:44.829Z'
+    - forever > winston > request > mime:
+        patched: '2018-06-28T00:54:44.829Z'
+    - forever > winston > request > form-data > mime:
+        patched: '2018-06-28T00:54:44.829Z'
+    - soundcloud-lookup > superagent > mime:
+        patched: '2018-06-28T00:54:44.829Z'
+    - soundcloud-lookup > superagent > form-data > mime:
+        patched: '2018-06-28T00:54:44.829Z'
+    - swig-email-templates > juice2 > superagent > mime:
+        patched: '2018-06-28T00:54:44.829Z'
+    - swig-email-templates > juice2 > superagent > form-data > mime:
+        patched: '2018-06-28T00:54:44.829Z'
