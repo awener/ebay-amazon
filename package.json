@@ -37,7 +37,9 @@
   "scripts": {
     "start": "node node_modules/grunt-cli/bin/grunt",
     "test": "node node_modules/grunt-cli/bin/grunt test",
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "postinstall": "node node_modules/bower/bin/bower install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "2checkout-node": "0.0.1",
@@ -100,7 +102,8 @@
     "twitter": "^0.2.9",
     "url": "^0.10.1",
     "view-helpers": "^0.1.4",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "assetmanager": "^0.1.1",
@@ -113,5 +116,6 @@
     "supertest": "0.8.2",
     "swig-email-templates": "https://registry.npmjs.org/swig-email-templates/-/swig-email-templates-1.1.0.tgz",
     "time-grunt": "^0.3.1"
-  }
+  },
+  "snyk": true
 }
