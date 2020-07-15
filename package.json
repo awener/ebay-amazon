@@ -74,7 +74,7 @@
     "instagram-node": "^0.3.0",
     "kue": "^0.9.3",
     "load-grunt-tasks": "^0.4.0",
-    "lodash": "^2.4.1",
+    "lodash": "^4.17.19",
     "mailgun-js": "^0.7.14",
     "mandrill-api": "^1.0.45",
     "mean-logger": "0.0.1",
