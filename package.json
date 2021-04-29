@@ -58,7 +58,7 @@
     "dependable": "0.2.5",
     "express": "^3.4.7",
     "express-cors": "0.0.3",
-    "express-validator": "^1.0.1",
+    "express-validator": "^6.5.0",
     "fbgraph": "^0.2.10",
     "forever": "^0.10.11",
     "get-youtube-id": "^0.1.3",
