@@ -80,7 +80,7 @@
     "mean-logger": "0.0.1",
     "meanio": "0.4.x",
     "moment": "^2.6.0",
-    "mongoose": "^3.8.3",
+    "mongoose": "^4.10.2",
     "nodemailer": "^0.6.4",
     "passport": "^0.1.18",
     "passport-facebook": "^1.0.2",
