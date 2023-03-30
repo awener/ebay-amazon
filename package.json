@@ -37,7 +37,9 @@
   "scripts": {
     "start": "node node_modules/grunt-cli/bin/grunt",
     "test": "node node_modules/grunt-cli/bin/grunt test",
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "postinstall": "node node_modules/bower/bin/bower install",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "2checkout-node": "0.0.1",
@@ -56,7 +58,7 @@
     "cron": "^1.0.4",
     "debug": "^2.2.0",
     "dependable": "0.2.5",
-    "express": "^3.4.7",
+    "express": "^4.15.3",
     "express-cors": "0.0.3",
     "express-validator": "^1.0.1",
     "fbgraph": "^0.2.10",
@@ -67,7 +69,7 @@
     "grunt-contrib-csslint": "^0.2.0",
     "grunt-contrib-cssmin": "^0.9.0",
     "grunt-contrib-jshint": "latest",
-    "grunt-contrib-uglify": "^0.7.*",
+    "grunt-contrib-uglify": "^0.11.1",
     "grunt-contrib-watch": "latest",
     "grunt-env": "^0.4.1",
     "grunt-nodemon": "0.2.0",
@@ -75,10 +77,10 @@
     "kue": "^0.9.3",
     "load-grunt-tasks": "^0.4.0",
     "lodash": "^2.4.1",
-    "mailgun-js": "^0.7.14",
+    "mailgun-js": "^0.10.1",
     "mandrill-api": "^1.0.45",
     "mean-logger": "0.0.1",
-    "meanio": "0.4.x",
+    "meanio": "0.6.8",
     "moment": "^2.6.0",
     "mongoose": "^3.8.3",
     "nodemailer": "^0.6.4",
@@ -100,7 +102,8 @@
     "twitter": "^0.2.9",
     "url": "^0.10.1",
     "view-helpers": "^0.1.4",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "assetmanager": "^0.1.1",
@@ -113,5 +116,6 @@
     "supertest": "0.8.2",
     "swig-email-templates": "https://registry.npmjs.org/swig-email-templates/-/swig-email-templates-1.1.0.tgz",
     "time-grunt": "^0.3.1"
-  }
+  },
+  "snyk": true
 }
