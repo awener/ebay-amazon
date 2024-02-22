@@ -75,7 +75,7 @@
     "kue": "^0.9.3",
     "load-grunt-tasks": "^0.4.0",
     "lodash": "^2.4.1",
-    "mailgun-js": "^0.7.14",
+    "mailgun-js": "^0.22.0",
     "mandrill-api": "^1.0.45",
     "mean-logger": "0.0.1",
     "meanio": "0.4.x",
